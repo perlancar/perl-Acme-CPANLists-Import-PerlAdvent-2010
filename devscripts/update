@@ -1,0 +1,153 @@
+#!/usr/bin/env perl
+
+use 5.010;
+use strict;
+use warnings;
+use FindBin '$Bin';
+
+use App::CreateAcmeCPANListsImportModules;
+use Perinci::Sub::Util qw(gen_curried_sub);
+use Perinci::CmdLine::Any;
+
+gen_curried_sub(
+    'App::CreateAcmeCPANListsImportModules::create_acme_cpanlists_import_modules',
+    {
+        modules => [
+            {
+                name => '2010',
+                url => "http://perladvent.org/2010/",
+                extract_urls => [map {"http://perladvent.org/2010/$_/"} 1..24],
+                summary => 'Modules mentioned in Perl Advent Calendar 2010',
+            },
+            {
+                name => '2010_12_01',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 1)",
+                url => "http://perladvent.org/2010/1/",
+            },
+            {
+                name => '2010_12_02',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 2)",
+                url => "http://perladvent.org/2010/2/",
+            },
+            {
+                name => '2010_12_03',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 3)",
+                url => "http://perladvent.org/2010/3/",
+            },
+            {
+                name => '2010_12_04',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 4)",
+                url => "http://perladvent.org/2010/4/",
+            },
+            {
+                name => '2010_12_05',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 5)",
+                url => "http://perladvent.org/2010/5/",
+            },
+            {
+                name => '2010_12_06',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 6)",
+                url => "http://perladvent.org/2010/6/",
+            },
+            {
+                name => '2010_12_07',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 7)",
+                url => "http://perladvent.org/2010/7/",
+            },
+            {
+                name => '2010_12_08',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 8)",
+                url => "http://perladvent.org/2010/8/",
+            },
+            {
+                name => '2010_12_09',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 9)",
+                url => "http://perladvent.org/2010/9/",
+            },
+            {
+                name => '2010_12_10',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 10)",
+                url => "http://perladvent.org/2010/10/",
+            },
+            {
+                name => '2010_12_11',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 11)",
+                url => "http://perladvent.org/2010/11/",
+            },
+            {
+                name => '2010_12_12',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 12)",
+                url => "http://perladvent.org/2010/12/",
+            },
+            {
+                name => '2010_12_13',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 13)",
+                url => "http://perladvent.org/2010/13/",
+            },
+            {
+                name => '2010_12_14',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 14)",
+                url => "http://perladvent.org/2010/14/",
+            },
+            {
+                name => '2010_12_15',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 15)",
+                url => "http://perladvent.org/2010/15/",
+            },
+            {
+                name => '2010_12_16',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 16)",
+                url => "http://perladvent.org/2010/16/",
+            },
+            {
+                name => '2010_12_17',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 17)",
+                url => "http://perladvent.org/2010/17/",
+            },
+            {
+                name => '2010_12_18',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 18)",
+                url => "http://perladvent.org/2010/18/",
+            },
+            {
+                name => '2010_12_19',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 19)",
+                url => "http://perladvent.org/2010/19/",
+            },
+            {
+                name => '2010_12_20',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 20)",
+                url => "http://perladvent.org/2010/20/",
+            },
+            {
+                name => '2010_12_21',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 21)",
+                url => "http://perladvent.org/2010/21/",
+            },
+            {
+                name => '2010_12_22',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 22)",
+                url => "http://perladvent.org/2010/22/",
+            },
+            {
+                name => '2010_12_23',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 23)",
+                url => "http://perladvent.org/2010/23/",
+            },
+            {
+                name => '2010_12_24',
+                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 24)",
+                url => "http://perladvent.org/2010/24/",
+            },
+        ],
+        namespace => 'Acme::CPANLists::Import::PerlAdvent',
+        user_agent => 'Mozilla/5.0',
+        dist_dir => "$Bin/..",
+    },
+    'app',
+);
+
+Perinci::CmdLine::Any->new(
+    url => '/main/app',
+    log => 1,
+)->run;
