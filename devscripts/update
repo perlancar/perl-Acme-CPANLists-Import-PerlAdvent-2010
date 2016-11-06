@@ -48,6 +48,7 @@ gen_curried_sub(
                 name => '2010_12_06',
                 summary => "Modules mentioned in Perl Advent Calendar 2010 (day 6)",
                 url => "http://perladvent.org/2010/6/",
+                add_modules => ['App::XLSperl'],
             },
             {
                 name => '2010_12_07',
@@ -59,16 +60,18 @@ gen_curried_sub(
                 summary => "Modules mentioned in Perl Advent Calendar 2010 (day 8)",
                 url => "http://perladvent.org/2010/8/",
             },
-            {
-                name => '2010_12_09',
-                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 9)",
-                url => "http://perladvent.org/2010/9/",
-            },
-            {
-                name => '2010_12_10',
-                summary => "Modules mentioned in Perl Advent Calendar 2010 (day 10)",
-                url => "http://perladvent.org/2010/10/",
-            },
+            # no modules, discusses todo.pl
+            #{
+            #    name => '2010_12_09',
+            #    summary => "Modules mentioned in Perl Advent Calendar 2010 (day 9)",
+            #    url => "http://perladvent.org/2010/9/",
+            #},
+            # doesn't exist
+            #{
+            #    name => '2010_12_10',
+            #    summary => "Modules mentioned in Perl Advent Calendar 2010 (day 10)",
+            #    url => "http://perladvent.org/2010/10/",
+            #},
             {
                 name => '2010_12_11',
                 summary => "Modules mentioned in Perl Advent Calendar 2010 (day 11)",
